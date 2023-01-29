@@ -5,6 +5,7 @@ export const load = async ({ params }) => {
 	const countryResponse = await fetch(
 		settings.CountriesApiBaseUrl + '/name/' + params.country
 	).then((res) => {
+		console.log(res);
 		if (!res.ok) throw error(404, 'Not found');
 		return res;
 	});
