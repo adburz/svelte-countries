@@ -14,7 +14,7 @@ export const load = async ({ params }) => {
 	let currencyData = { Error: 'Could not load the currency data' };
 	if (countryData.currencies != null) {
 		let baseCurrency = Object.keys(countryData.currencies);
-		const currencyResponse = await fetch(
+		await fetch(
 			settings.CurrenciesApiBaseUrl +
 				'latest/?' +
 				settings.CurrectiesApiKey +
