@@ -9,15 +9,17 @@ Used API:
 https://restcountries.com/
 https://freecurrencyapi.com/
 
-Requirements:
+## Requirements:
 
 npm v9.3.1
 node v18.13.0
 
-To run locally:
+## To run locally:
+
 npm i
 npm run dev
 
-To run on docker:
+## To run on docker:
+
 docker build . -t countries
 docker run -d -p 5050:5050 --name countries countries
