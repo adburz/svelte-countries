@@ -5,7 +5,6 @@
 
 	let countries;
 	let selectedCountryName = null;
-	let countryData = null;
 
 	onMount(async () => {
 		countries = await fetch(settings.CountriesApiBaseUrl + '/all');
@@ -18,6 +17,7 @@
 </svelte:head>
 
 <div class="grid h-screen place-items-center">
+	<p class="text-sky-400 text-8xl">Project Countries</p>
 	<div class="grid grid-cols-2 gap-4 content-center">
 		<div>
 			<AutoComplete
@@ -39,11 +39,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- <style>
-	.box {
-		position: absolute;
-		margin-top: 600px;
-		margin-left: 1000px;
-	}
-</style> -->
